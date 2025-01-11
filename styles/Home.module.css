@@ -1,0 +1,111 @@
+@import url("https://use.typekit.net/yed8wxp.css");
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+}
+
+.container img {
+  max-width: 80vw;
+  max-height: 91vh;
+  transition: 1s ease-in-out;
+  border-radius: 1vw;
+}
+
+/*
+.container img:hover {
+  max-height: 300vh;
+  max-width: 300vw;
+  cursor: crosshair;
+  border-radius: 0;
+}
+*/
+
+.container p {
+  max-width: 75ch;
+  text-align: center;
+}
+
+.container h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.container h2 {
+  margin: 0.6em 0 -0.3em 0;
+}
+
+.container h2:hover, .container h1:hover {
+  text-decoration: underline;
+}
+
+.container h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+#description {
+  margin: 0 0 2em 0;
+}
+
+#imageContainer {
+  max-width: 80vw;
+  height: 95vh;
+  overflow: scroll;
+  position: relative;
+}
+
+#imageContainer::after {
+  content: "Scroll to move image up/down, and press shift & scroll to move image left/right";
+  color: white;
+  background-color: black;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+/*
+#imageContainer:hover::after {
+  animation-name: fade;
+  animation-duration: 5s;
+}
+*/
+
+@keyframes fade {
+  0% {opacity: 0.8}
+  60% {opacity: 0.7}
+  75% {opacity: 0.6}
+  100% {opacity: 0;}
+}
+
+.container footer p {
+  font-size: 0.8em;
+  margin: 2.1em 0 0.4em 0;
+}
+
+.container footer a {
+  text-decoration: underline;
+}
+
+#error {
+  position: relative;
+  overflow: visible;
+}
+
+#error:hover {
+  height: 3em;
+}
+
+#error:hover::after {
+  content: " Try reloading the page or closing and reopening it. You can also click the title to view the original APOD page.";
+  position: relative;
+  top: 1em;
+}
